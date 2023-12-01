@@ -1,6 +1,7 @@
 #!/bin/python3
 
 import os
+import sys
 
 def check_reboot():
 	"""Returns True if the computer has a pending reboot"""
@@ -8,6 +9,8 @@ def check_reboot():
 	
 
 def main():
-	pass
+	if check_reboot():
+		print("Pending Reboot.")
+		sys.exit(1)
 
 main()
